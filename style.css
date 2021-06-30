@@ -25,7 +25,8 @@ body {
 }
 h1 {
     font-size: 2rem;
-    text-align: center;
+    text-align: left;
+    padding-left: 1rem;
     color: var(--very-dark-grayish-blue);
 }
 .container {
@@ -64,7 +65,7 @@ summary {
 summary::after {
     content: url(images/icon-arrow-down.svg);
     position: absolute;
-    right: 1rem;
+    right: 0rem;
     transition: transform 0.4s;
 }
 summary:hover {
@@ -117,7 +118,6 @@ when screen width changes? How can I prevent that?
         background-repeat: no-repeat;
         background-position: -3.5rem 0;;
     }
-    
     .desktop-block {
         content: url(images/illustration-box-desktop.svg);
         /* url() in src of img was not responsive or huge or not displayed, but this works */
@@ -129,6 +129,10 @@ when screen width changes? How can I prevent that?
     }
     main {
         grid-column: 2;
+    }
+    details {
+        max-width: 50ch;
+        padding: 1rem;
     }
     .mobile {
         display: none;
